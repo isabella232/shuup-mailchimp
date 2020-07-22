@@ -5,85 +5,23 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-import os
-import tempfile
+# -*- coding: utf-8 -*-
+from shuup_workbench.settings.utils import get_disabled_migrations
+from shuup_workbench.test_settings import *  # noqa
 
-SECRET_KEY = "shmailchimp"
-
-
-INSTALLED_APPS = (
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "easy_thumbnails",
-    "filer",
-    "shuup.core",
-    "shuup.admin",
-    "shuup.customer_group_pricing",
-    "shuup.campaigns",
-    "shuup.front",
-    "shuup.default_tax",
-    "shuup_mailchimp",
-    "bootstrap3",  # shuup.admin requirement
-)
-
-MIDDLEWARE_CLASSES = [
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'shuup.front.middleware.ProblemMiddleware',
-    'shuup.core.middleware.ShuupMiddleware',
-    'shuup.front.middleware.ShuupFrontMiddleware',
-    'shuup.admin.middleware.ShuupAdminMiddleware'
+INSTALLED_APPS = list(locals().get('INSTALLED_APPS', [])) + [
+    'shuup_mailchimp',
 ]
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(
-            tempfile.gettempdir(),
-            'shuup_mailchimp.sqlite3'
-        ),
+        'NAME': 'test_db.sqlite3'
     }
 }
 
-MEDIA_ROOT = os.path.join(os.path.dirname(__file__), "var", "media")
-
-STATIC_URL = "static/"
-
-ROOT_URLCONF = 'shuup_workbench.urls'
-
-LANGUAGES = [
-    ('en', 'English'),
-    ('fi', 'Finnish'),
-]
-
-USE_TZ = True
-
-PARLER_DEFAULT_LANGUAGE_CODE = "en"
-
-PARLER_LANGUAGES = {
-    None: [{"code": c, "name": n} for (c, n) in LANGUAGES],
-    'default': {
-        'hide_untranslated': False,
-    }
-}
-
-TEMPLATES = [
-    {
-        "BACKEND": "django_jinja.backend.Jinja2",
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "match_extension": ".jinja",
-            "newstyle_gettext": True,
-        },
-        "NAME": "jinja2",
-    },
-]
-
-SHUUP_GET_ADMIN_MODULES_SPEC = ("shuup.admin.module_registry.get_admin_modules")
-SHUUP_ADMIN_SHOP_PROVIDER_SPEC = ("shuup.admin.shop_provider.AdminShopProvider")
+MIGRATION_MODULES = get_disabled_migrations()
+MIGRATION_MODULES.update({
+    app: None
+    for app in INSTALLED_APPS
+})

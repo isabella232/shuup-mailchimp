@@ -26,8 +26,8 @@ class Migration(migrations.Migration):
                 ('sent_to_mailchimp', models.DateTimeField(null=True, verbose_name='sent to mailchimp')),
                 ('latest_push_failed', models.NullBooleanField(verbose_name='latest push failed')),
                 ('mailchimp_id', models.CharField(max_length=160, null=True, verbose_name='mailchimp id')),
-                ('contact', models.ForeignKey(verbose_name='contact', to='shuup.Contact')),
-                ('shop', models.ForeignKey(related_name='+', verbose_name='shop', to='shuup.Shop')),
+                ('contact', models.ForeignKey(on_delete=models.deletion.CASCADE, verbose_name='contact', to='shuup.Contact')),
+                ('shop', models.ForeignKey(on_delete=models.deletion.CASCADE, related_name='+', verbose_name='shop', to='shuup.Shop')),
             ],
             options={
                 'abstract': False,
@@ -42,8 +42,8 @@ class Migration(migrations.Migration):
                 ('sent_to_mailchimp', models.DateTimeField(null=True, verbose_name='sent to mailchimp')),
                 ('latest_push_failed', models.NullBooleanField(verbose_name='latest push failed')),
                 ('mailchimp_id', models.CharField(max_length=160, null=True, verbose_name='mailchimp id')),
-                ('group', models.ForeignKey(verbose_name='contact group', to='shuup.ContactGroup')),
-                ('shop', models.ForeignKey(related_name='+', verbose_name='shop', to='shuup.Shop')),
+                ('group', models.ForeignKey(on_delete=models.deletion.CASCADE, verbose_name='contact group', to='shuup.ContactGroup')),
+                ('shop', models.ForeignKey(on_delete=models.deletion.CASCADE, related_name='+', verbose_name='shop', to='shuup.Shop')),
             ],
             options={
                 'abstract': False,
@@ -58,7 +58,7 @@ class Migration(migrations.Migration):
                 ('identifier', models.CharField(max_length=64, verbose_name='identifier', blank=True)),
                 ('kind', enumfields.fields.EnumIntegerField(default=0, enum=shuup.utils.analog.LogEntryKind, verbose_name='log entry kind')),
                 ('extra', jsonfield.fields.JSONField(null=True, verbose_name='extra data', blank=True)),
-                ('target', models.ForeignKey(related_name='log_entries', verbose_name='target', to='shuup_mailchimp.MailchimpContact')),
+                ('target', models.ForeignKey(on_delete=models.deletion.CASCADE, related_name='log_entries', verbose_name='target', to='shuup_mailchimp.MailchimpContact')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, verbose_name='user', to=settings.AUTH_USER_MODEL, null=True)),
             ],
             options={
