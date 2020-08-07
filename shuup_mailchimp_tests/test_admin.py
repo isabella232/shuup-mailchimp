@@ -17,7 +17,7 @@ from shuup_mailchimp_tests.utils import (
 @pytest.mark.django_db
 def test_connect_view(rf, admin_user, default_shop):
     view = MailchimpConnectView.as_view()
-    request = apply_request_middleware(rf.get("/"), user=admin_user, shop=default_shop)
+    request = apply_request_middleware(rf.get("/"), user=admin_user)
     response = view(request)
     assert response.status_code == 200
     response.render()
@@ -41,7 +41,7 @@ def test_connect_view(rf, admin_user, default_shop):
 def test_connect_view_with_post(rf, admin_user, default_shop):
     configuration.cache.clear()
     view = MailchimpConnectView.as_view()
-    request = apply_request_middleware(rf.get("/"), user=admin_user, shop=default_shop)
+    request = apply_request_middleware(rf.get("/"), user=admin_user)
     response = view(request)
     assert response.status_code == 200
     response.render()
@@ -53,14 +53,14 @@ def test_connect_view_with_post(rf, admin_user, default_shop):
         "api_key": MC_API_KEY,
         "list_id": MC_API_LIST_ID,
         "username": MC_API_USERNAME,
-    }), user=admin_user, shop=default_shop)
+    }), user=admin_user)
 
     response = view(request)
     assert response.status_code == 200
     response_data = json.loads(response.content.decode("utf-8"))
     assert response_data.get("message")
 
-    request = apply_request_middleware(rf.get("/"), user=admin_user, shop=default_shop)
+    request = apply_request_middleware(rf.get("/"), user=admin_user)
     response = view(request)
     assert response.status_code == 200
     response.render()
@@ -73,7 +73,8 @@ def test_connect_view_with_post(rf, admin_user, default_shop):
 
 @pytest.mark.django_db
 def test_home_view(rf, admin_user, default_shop):
-    request = apply_request_middleware(rf.get("/"), user=admin_user, shop=default_shop)
+    configuration.cache.clear()
+    request = apply_request_middleware(rf.get("/"), user=admin_user)
     response = HomeView.as_view()(request)
     assert response.status_code == 200
     response.render()

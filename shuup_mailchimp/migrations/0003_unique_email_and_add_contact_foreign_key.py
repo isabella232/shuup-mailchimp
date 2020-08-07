@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='mailchimpcontact',
             name='contact',
-            field=models.ForeignKey(related_name='+', verbose_name='contact', blank=True, to='shuup.Contact', null=True),
+            field=models.ForeignKey(on_delete=models.deletion.CASCADE, related_name='+', verbose_name='contact', blank=True, to='shuup.Contact', null=True),
         ),
 
     ]
