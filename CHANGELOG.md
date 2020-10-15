@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Enter here all the changes made to the development version
 
+## [2.0.1] - 2020-10-15
+
+- Update translations from Transifex
+
+
 ## [2.0.0] - 2020-08-05
 
 Add Shuup 2.0 support. Not backwards compatible with 1.x version.
