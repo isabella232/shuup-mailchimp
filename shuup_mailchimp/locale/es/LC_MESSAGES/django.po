@@ -14,21 +14,21 @@ msgstr ""
 "POT-Creation-Date: 2019-06-10 21:32+0000\n"
 "PO-Revision-Date: 2019-03-12 23:41+0000\n"
 "Last-Translator: Panu Tulimäki <panu@shuup.com>, 2020\n"
-"Language-Team: Finnish (Finland) (https://www.transifex.com/shuup/teams/55306/fi_FI/)\n"
+"Language-Team: Spanish (https://www.transifex.com/shuup/teams/55306/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi_FI\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Mailchimp"
 msgstr "Mailchimp"
 
 msgid "Re-connect Mailchimp"
-msgstr "Yhdistä Mailchimp uudelleen"
+msgstr "Vuelve a conectar Mailchimp"
 
 msgid "Connect Mailchimp"
-msgstr "Yhdistä Mailchimp"
+msgstr "Conectar Mailchimp"
 
 msgid "MailChimp"
 msgstr "MailChimp"
@@ -37,138 +37,139 @@ msgid ""
 "Connect your Mailchimp account to Shuup store. Once connected, your "
 "customers can be added to your mailing list."
 msgstr ""
-"Yhdistä Mailchimp-tilisi Shuup-kauppaan. Kun yhteys on muodostettu, "
-"asiakkaasi voidaan lisätä postituslistallesi."
+"Conecta tu cuenta de Mailchimp a la tienda Shuup. Una vez conectado, sus "
+"clientes pueden agregarse a su lista de correo."
 
 msgid "Mailchimp API key"
-msgstr "Mailchimp-sovellusliittymäavain"
+msgstr "Clave de API de Mailchimp"
 
 msgid "Mailchimp list id"
-msgstr "Mailchimp-luettelon tunnus"
+msgstr "ID de lista de Mailchimp"
 
 msgid "Enabled"
-msgstr "Käytössä"
+msgstr "Habilitado"
 
 msgid "Mailchimp username"
-msgstr "Mailchimp-käyttäjänimi"
+msgstr "Nombre de usuario de Mailchimp"
 
 msgid "Testing configuration failed"
-msgstr "Kokoonpanon testaus epäonnistui"
+msgstr "No se pudo probar la configuración"
 
 msgid "Configuration test successful"
-msgstr "Määritystesti onnistui"
+msgstr "Prueba de configuración exitosa"
 
 msgid "no status"
-msgstr "Ei statusta"
+msgstr "sin Estado"
 
 msgid "subscribed"
-msgstr "tilattu"
+msgstr "suscrito"
 
 msgid "unsubscribed"
-msgstr "peruutettu"
+msgstr "anulado"
 
 msgid "cleaned"
-msgstr "puhdistettu"
+msgstr "limpiado"
 
 msgid "pending"
-msgstr "odottaa"
+msgstr "pendiente"
 
 msgid "shop"
-msgstr "myymälä"
+msgstr "tienda"
 
 msgid "updated"
-msgstr "päivitetty"
+msgstr "actualizado"
 
 msgid "created"
-msgstr "luotu"
+msgstr "creado"
 
 msgid "sent to mailchimp"
-msgstr "lähetetään mailchimpiin"
+msgstr "enviado a mailchimp"
 
 msgid "contact"
-msgstr "ottaa yhteyttä"
+msgstr "contacto"
 
 msgid "email"
-msgstr "sähköposti"
+msgstr "correo electrónico"
 
 msgid ""
 "The email that will receive order confirmations and promotional materials "
 "(if permitted)."
 msgstr ""
-"Sähköposti, joka saa tilausvahvistukset ja mainosmateriaalia (jos sallittu)."
+"El correo electrónico que recibirá confirmaciones de pedidos y materiales "
+"promocionales (si está permitido)."
 
 msgid "Subscribe Newsletter (Mailchimp)"
-msgstr "Tilaa uutiskirje (Mailchimp)"
+msgstr "Suscribirse al boletín (Mailchimp)"
 
 msgid "Title"
-msgstr "Otsikko"
+msgstr "Título"
 
 msgid "Lead text"
-msgstr "Lead-teksti"
+msgstr "Texto principal"
 
 msgid "Submit button text"
-msgstr "Lähetä painikkeen teksti"
+msgstr "Enviar texto del botón"
 
 msgid "Input placeholder text"
-msgstr "Syötä paikkamerkin teksti"
+msgstr "Introducir texto de marcador de posición"
 
 msgid "Success message"
-msgstr "Menestysviesti"
+msgstr "Mensaje de éxito"
 
 msgid "Error message"
-msgstr "Virheviesti"
+msgstr "Mensaje de error"
 
 msgid "Do not require consent when GDPR is activated."
-msgstr "Älä vaadi suostumusta, kun GDPR on aktivoitu."
+msgstr "No requiera consentimiento cuando GDPR está activado."
 
 msgid "I want to receive marketing material"
-msgstr "Haluan saada markkinointimateriaalia"
+msgstr "Quiero recibir material de marketing"
 
 msgid ""
 "To enable your integration with Mailchimp, please create a Mailchimp list in your Mailchimp admin panel\n"
 "            and link it to Shuup. The List ID can be found under \"Settings->List name and defaults\" in the Mailchimp admin panel."
 msgstr ""
-"Ota integrointi Mailchimpiin käyttöön luomalla Mailchimp-luettelo "
-"Mailchimpin hallintapaneeliin ja linkittämällä se Shuupiin. Luettelotunnus "
-"löytyy Mailchimpin hallintapaneelin kohdasta &quot;Asetukset-&gt; Luettelon "
-"nimi ja oletusarvot&quot;."
+"Para habilitar tu integración con Mailchimp, crea una lista de Mailchimp en "
+"tu panel de administración de Mailchimp y vincúlala a Shuup. El ID de lista "
+"se puede encontrar en &quot;Configuración-&gt; Nombre de lista y valores "
+"predeterminados&quot; en el panel de administración de Mailchimp."
 
 msgid ""
 "The second step is to generate an API key for the integration in your Mailchimp admin panel and add it to the form below.\n"
 "            API key generation can be found under \"Account->Extras->API keys\" in the Mailchimp admin panel."
 msgstr ""
-"Toinen vaihe on luoda API-avain integrointia varten Mailchimpin "
-"hallintapaneelissa ja lisätä se alla olevaan lomakkeeseen. API-avaimen "
-"luonti löytyy Mailchimpin hallintapaneelin kohdasta &quot;Tili-&gt; "
-"Ekstrat-&gt; API-avaimet&quot;."
+"El segundo paso es generar una clave API para la integración en tu panel de "
+"administración de Mailchimp y agregarla al formulario a continuación. La "
+"generación de claves API se puede encontrar en &quot;Cuenta-&gt; Extras-&gt;"
+" Claves API&quot; en el panel de administración de Mailchimp."
 
 msgid ""
 "When you have all the configurations saved test your integration and enable "
 "it."
 msgstr ""
-"Kun kaikki kokoonpanot on tallennettu, testaa integrointi ja ota se "
-"käyttöön."
+"Cuando tenga todas las configuraciones guardadas, pruebe su integración y "
+"habilítela."
 
 msgid "Last Connection check"
-msgstr "Viimeinen yhteyden tarkistus"
+msgstr "Última comprobación de conexión"
 
 msgid "Last Connection status"
-msgstr "Viimeisen yhteyden tila"
+msgstr "Estado de la última conexión"
 
 msgid "Success"
-msgstr "Menestys"
+msgstr "Éxito"
 
 msgid "Failure"
-msgstr "Epäonnistuminen"
+msgstr "Fracaso"
 
 msgid "Save and Test Connection"
-msgstr "Tallenna ja testaa yhteys"
+msgstr "Guardar y probar la conexión"
 
 msgid "Unexpected error happened please try again."
-msgstr "Odottamaton virhe, yritä uudelleen."
+msgstr "Se produjo un error inesperado. Vuelva a intentarlo."
 
 msgid "The newsletter cannot be shown because Mailchimp is not connected."
-msgstr "Uutiskirjettä ei voida näyttää, koska Mailchimp ei ole yhteydessä."
+msgstr "El boletín no se puede mostrar porque Mailchimp no está conectado."
 
 msgid "I have read and agree to <a href='{}' target='_blank'>{}</a>"
-msgstr "Olen lukenut ja hyväksyn <a href='{}' target='_blank'>{}</a>"
+msgstr "He leído y acepto <a href='{}' target='_blank'>{}</a>"
